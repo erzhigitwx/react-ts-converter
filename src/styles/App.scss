@@ -1,0 +1,91 @@
+@mixin text($size, $color) {
+  color: $color;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: $size;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+* {
+  background-color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  @include text(24px, #e0d424);
+}
+.app-title {
+  margin-bottom: 50px;
+}
+.dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.converter {
+  display: grid;
+  grid-template-rows: repeat(1, minmax(200px, 50vh));
+  grid-template-columns: repeat(2, minmax(200px, 30vw));
+  gap: 20px;
+  div {
+    background-color: #e0d424;
+    padding: 20px;
+    p {
+      height: 30px;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include text(20px, #2e2e2e);
+      color: #e0d424;
+    }
+  }
+  .second-block__content,
+  .first-block__content {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    select {
+      width: 60%;
+      height: 30px;
+      @include text(14px, #e0d424);
+    }
+    input {
+      width: 90%;
+      height: 60px;
+      @include text(14px, #e0d424);
+      text-align: start;
+      padding: 10px;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .converter {
+    grid-template-rows: repeat(2, minmax(300px, 50vh));
+    grid-template-columns: repeat(1, minmax(300px, 60vw));
+  }
+}
+@media (max-width: 550px){
+  .converter{
+    grid-template-rows: repeat(2, minmax(300px, 60vh));
+  }
+  .dates{
+    font-size: 14px;
+  }
+}
