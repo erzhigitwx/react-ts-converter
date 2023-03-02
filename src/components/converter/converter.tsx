@@ -90,49 +90,47 @@ const Converter = function ({
           <p className="now-date">today: {nowDateShow}</p>
         </div>
         <div className="converter">
-          <div className="converter__first-block">
+          <div className="first-block__content converter-content">
             <p className="first-block__text">From</p>
-            <div className="first-block__content">
-              <select
-                value={fromCurrency}
-                onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                  setFromCurrency(e.target.value)
-                }
-                className="first-block__content-text"
-              >
-                {name.map((elem, index) => (
-                  <option key={elem} value={charCode[index]}>
-                    {elem}: {charCode[index]}
-                  </option>
-                ))}
-              </select>
-              <input
-                type="number"
-                className="first-block__content-input"
-                value={firstInputValue}
-                onChange={inputHandler}
-              />
-
-              <select
-                className="second-block__content-text"
-                value={toCurrency}
-                onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                  setToCurrency(e.target.value)
-                }
-              >
-                {name.map((elem, index) => (
-                  <option key={elem} value={charCode[index]}>
-                    {elem}: {charCode[index]}
-                  </option>
-                ))}
-              </select>
-              <input
-                type="text"
-                className="second-block__content-input"
-                value={isNaN(result) ? "" : result}
-                disabled={true}
-              />
-            </div>
+            <select
+              value={fromCurrency}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                setFromCurrency(e.target.value)
+              }
+              className="first-block__content-text"
+            >
+              {name.map((elem, index) => (
+                <option key={elem} value={charCode[index]}>
+                  {elem}: {charCode[index]}
+                </option>
+              ))}
+            </select>
+            <input
+              type="number"
+              className="first-block__content-input"
+              value={firstInputValue}
+              onChange={inputHandler}
+            />
+            <p className="second-block__text">to</p>
+            <select
+              className="second-block__content-text"
+              value={toCurrency}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                setToCurrency(e.target.value)
+              }
+            >
+              {name.map((elem, index) => (
+                <option key={elem} value={charCode[index]}>
+                  {elem}: {charCode[index]}
+                </option>
+              ))}
+            </select>
+            <input
+              type="text"
+              className="second-block__content-input"
+              value={isNaN(result) ? "" : result}
+              disabled={true}
+            />
           </div>
         </div>
       </>

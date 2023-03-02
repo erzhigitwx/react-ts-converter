@@ -83,9 +83,21 @@ body {
 }
 @media (max-width: 550px){
   .converter{
-    grid-template-rows: repeat(2, minmax(300px, 60vh));
+    grid-template-rows: repeat(1, minmax(300px, 70vh));
   }
   .dates{
     font-size: 14px;
+  }
+  .converter{
+    div{
+      p{
+        width: 90%;
+      }
+    }
+    .converter-content{
+      .second-block__text{
+        margin-top: 30px;
+      }
+    }
   }
 }
