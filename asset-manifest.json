@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-ts-converter/static/css/main.57f0b7cc.css",
+    "main.js": "/react-ts-converter/static/js/main.7eba622d.js",
+    "index.html": "/react-ts-converter/index.html",
+    "main.57f0b7cc.css.map": "/react-ts-converter/static/css/main.57f0b7cc.css.map",
+    "main.7eba622d.js.map": "/react-ts-converter/static/js/main.7eba622d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57f0b7cc.css",
+    "static/js/main.7eba622d.js"
+  ]
+}
